@@ -7,12 +7,28 @@ package csigaverseny;
 import java.util.Random;
 
 public class Csiga {
+
     int lepes, osszlepes;
     String szin;
     Random rnd = new Random();
-    int mozgas(){
-        lepes = rnd.nextInt(0,4);
-        osszlepes+=lepes;
+
+    void mozgas() {
+        lepes = rnd.nextInt(0, 4);
+        osszlepes += lepes;
+        String[] szinek = {"Zöld", "Piros", "Kék"};
+        szin = szinek[rnd.nextInt(0, szinek.length)];
         return lepes;
     }
-}
+    
+    
+    public int getOsszlepes() {
+        return osszlepes;
+    }
+
+    public String getSzin() {
+        return szin;
+    }
+
+
+    }
+
