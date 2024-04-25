@@ -1,18 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package csigaverseny;
 
 import java.util.Random;
 
 public class Csiga {
-    int lepes, osszlepes;
-    String szin;
-    Random rnd = new Random();
-    int mozgas(){
-        lepes = rnd.nextInt(0,4);
-        osszlepes+=lepes;
+
+    public static int getLepes() {
         return lepes;
+    }
+
+    public static int getOsszlepes() {
+        return osszlepes;
+    }
+
+    public static String getSzin() {
+        return szin;
+    }
+
+    private static int lepes;
+    private static int osszlepes;
+    private static String szin;
+    static Random rnd = new Random();
+
+    void mozgas(int szam) {
+        lepes = szam * rnd.nextInt(0, 4);
+        osszlepes += lepes;
+
+    }
+
+    void mozgas() {
+        int szam = 1;
+        mozgas(szam);
     }
 }
