@@ -4,10 +4,8 @@
  */
 package csigaverseny;
 
-/**
- *
- * @author TarGergő(SZF_2022_20
- */
+import java.util.Random;
+
 public class Csiga {
-    
+
 }
